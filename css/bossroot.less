@@ -1,0 +1,35 @@
+// out: bossroot.css, compress: true
+
+html, body, #root, .container-page, .container-page-content {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+input {
+	outline: 0;
+	padding: 0
+}
+
+.container-page-content {
+    display: flex;
+    justify-content: space-between;
+    min-height: 900px;
+}
+
+#mum {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url(../img/mum.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 999;
+    display: none;
+}

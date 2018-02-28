@@ -1,0 +1,43 @@
+// out: bossoffcanvas.css, compress: true
+
+.container-offcanvas{
+	display: flex;
+	flex-direction: column;
+	background-color: #d8d8d8;
+	box-shadow: 2px 0px 8px 0px rgba(0, 0, 0, 0.4);
+	overflow-x: hidden;
+	z-index: 1;
+
+	.fold {
+		width: 100%;
+
+		.title {
+			width: 100%;
+			padding-left: 10px;
+			line-height: 40px;
+			background-color: #f2f2f2;
+		}
+
+		.container-list {
+			width: 100%;
+
+			.item {
+				padding-left: 20px;
+				line-height: 40px;
+				cursor: pointer;
+			}
+
+			.selected {
+				color: #5f87b0;
+			}
+		}
+	}
+}
+
+.offcanvas-show {
+	width: 180px;
+}
+
+.offcanvas-hidden {
+	width: 0px;
+}

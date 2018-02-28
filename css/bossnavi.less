@@ -1,0 +1,59 @@
+// out: bossnavi.css, compress: true
+
+@themeColor: #5f87b0;
+.container-navi {
+	height: 44px;
+	width: 100%;
+	background-color: @themeColor;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.util-navi {
+		display: flex;
+
+		.input-navi-ctrl {
+			width: 40px;
+			height: 40px;
+			margin-left: 10px;
+			//background: url(../img/bosscuts.png) 0 -480px;
+			border: 0;
+			outline: 0;
+			cursor: pointer;
+			background-color: rgba(0, 0, 0, 0);
+			color: white;
+			font-size: 14px;
+		}
+
+		.input-navi-ctrl:active {
+			border-top: 1px solid rgba(0, 0, 0, 0);
+		}
+
+		.logout {
+			// color: #333;
+			// font-size: 12px;
+			margin-left: 50px;
+		}
+	}
+
+	.container-navi-title {
+		margin-right: 10px;
+		display: flex;
+		align-items: center;
+
+		.input-navi-title {
+			margin-right: 4px;
+			width: 40px;
+			height: 40px;
+			margin-left: 10px;
+			background: url(../img/bosscuts.png) 0 -520px;
+			border: 0;
+			outline: 0;
+		}
+
+		span {
+			color: white;
+			font-style: 14px;
+		}
+	}
+}

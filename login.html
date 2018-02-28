@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <meta charset="UTF-8">
+        <title>零零汽后台登录页面</title>
+    </head>
+    <style type="text/css">
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img/bossloginbg.png);
+            background-position: center;
+            background-repeat: repeat;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .LoginContainer {
+            height: 240px;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: white;    
+        }
+        .LoginHeaderContainer {
+            width: 100%;
+            height: 60px;
+            color: white;
+            background-color: #0C1A35;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        input {
+            width: 200px;
+            height: 32px;
+            margin-top: 20px;
+            border: #D8D8D8 solid 1px;
+            border-radius: 2px;
+        }
+        button {
+            width: 160px;
+            height: 32px;
+            margin-top: 20px;
+            border: #2F6AFF solid 1px;
+            border-radius: 2px;
+            border-radius: 2px;
+            background-color: #2F6AFF;
+            color: white;
+        }
+    </style>
+    <body>
+        <div class="LoginContainer">
+            <div class="LoginHeaderContainer">
+                零零汽后台管理系统
+            </div>
+            <input id="username" placeholder="登录名" maxlength="11"  value="" />
+            <input id="password" placeholder="密码" type="password"  value="" />
+            <button onclick="login()">登录</button>
+        </div>
+        
+        <script type="text/javascript">
+            var version = 370
+        </script>
+        <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/bossutils.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            var local = ["vipname","vippassnum"]
+               var _username = localStorage.getItem(local[0]) || document.getElementById('username').value
+               var  _password = localStorage.getItem(local[1]) || document.getElementById('password').value 
+               document.getElementById('username').value = _username
+               document.getElementById('password').value = _password
+               $('#username').bind('input propertychange', function() {  
+                    _username = document.getElementById('username').value  
+                });
+
+               $('#password').bind('input propertychange', function() {  
+                    _password = document.getElementById('password').value  
+                });
+            function login() {
+                // var _username = document.getElementById('username').value
+                // var _password = document.getElementById('password').value
+                
+                if(_username.length < 1) {
+                    alert('输入用户名')
+                    return
+                }
+                if(_password.length < 1) {
+                    alert('输入密码')
+                    return
+                }
+                var _url = "http://192.168.10.111:81/login"
+                _url = "/login"
+                var _obj = {
+                    username: _username,
+                    password: _password
+                }
+                localStorage.setItem(local[0],_username)
+                localStorage.setItem(local[1],_password)
+               
+                postAjax(_url, _obj, function(res) {
+                    //location.href = "/boss/index.html"
+                    location.href = "/"
+                    //location.href = res.url
+                })
+            }
+        </script>
+    </body>
+</html>

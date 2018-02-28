@@ -1,0 +1,256 @@
+// out: numbercollection.css, compress: true
+
+@import "./base";
+@opacity: rgba(0, 0, 0, 0);
+@d8: #d8d8d8;
+@5f: #5F87B0;
+
+body {
+    background: none repeat scroll 0 0 #f4f4f4;
+    border: 0 none;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #555555;
+}
+img {
+    vertical-align: middle;
+}
+/*头部————————————————————————————————*/
+.nInclude{
+    background-color: #f2f2f2;
+    padding-bottom: @pTen*2;
+    flex-grow: 1;
+}
+.nIncludeHead>h1{
+    margin: 0;
+    background: #fff;
+    line-height: 44px;
+    height: 44px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #333;
+}
+.containerHeader:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.chooseDays {
+    font-size: @pSeven*2;
+    color: @fcSub;
+    padding-left: @pTen*2;
+    float: left;
+    &>div{
+     	float: left;
+    }
+    img{
+    	   margin-right: @pTen*2;
+    }
+    span{
+    	   margin-right: 34px;
+    }
+}
+.lagdateContainer {
+    float: right;
+    .relative;
+    padding-right: 32px;
+    span{
+    	   margin:0 @pTen;
+    }
+    &>input{
+    	   border: 1px solid #D8D8D8;
+        width: 10px*10;
+        height: 28px;
+    }
+}
+.downLoad {
+    .inlineBlock;
+    font-size: @pSeven*2;
+    color: @fcSub;
+    padding-left: 46px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.weeklyList {
+    padding: 0;
+    list-style: none;
+    width: 10px*10;
+    text-align: center;
+    color: #fff;
+    .absolute;
+    display: none;
+    overflow: hidden;
+    background: #009F95;
+    max-height: 10px*20;
+    overflow: @auto;
+}
+.endWeekly {
+    left: @pTen*12;
+}
+.weeklyList>li{
+         width: @cHalf;
+        float: left;
+        height: @pTen*3;
+        transition: background-color 0.4s;
+        line-height: @pTen*3;
+    }
+/*内容部分+++++++++++++++++++++++*/
+.nBody{
+    overflow: hidden;
+    background: #fff;
+    margin:0 @pTen*2 @pTen*2 @pTen*2;
+    border: 1px solid #D8D8D8;
+    min-width: 748px;
+}
+.nBodyLeft,.nBodyRight{
+    float: left;
+    width: @cTen*2;
+}
+.nBodyRight{
+    width: @cTen*8;
+    display: inline-flex;
+    flex-direction: row;
+    &>div{
+    	flex-grow: 1;
+    }
+}
+.nBodyPortaitIndex{
+    width: @cTen*2;
+    float: left;
+}
+.nBodyPortaitName{
+    width: @cTen*8;
+    float: left;
+    &>div{
+        white-space: nowrap;
+        text-align: left;
+    }
+}
+
+.nContentList{
+    height: @pTen*4;
+    // line-height: @pTen*4;
+    border-bottom: 1px solid #d8d8d8;
+    text-align: center;
+    font-size: @pSeven*2;
+    color: @fcSub;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nBodyPortait .nContentList:nth-child(2),
+.nBodyPortait .nContentList:nth-child(3),
+.nBodyPortait .nContentList:nth-child(6),
+.nBodyPortait .nContentList:nth-child(7),
+.nBodyPortait .nContentList:nth-child(8),
+.nBodyPortait .nContentList:nth-child(9),
+.nBodyPortait .nContentList:nth-child(10),
+.nBodyPortait .nContentList:nth-child(11),
+.nBodyPortait .nContentList:nth-child(12),
+.nBodyPortait .nContentList:nth-child(14),
+.nBodyPortait .nContentList:nth-child(17){
+    background-color: #F2F2F2;
+    color: @fcMain;
+}
+
+.util {
+        position: relative;
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .container-type {
+            .button {
+                height: 32px;
+                width: 96px;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                border-radius: 4px;
+                margin-left: 20px;
+                background-color: white;
+                color: #666;
+            }
+
+            .selected {
+                background-color: @5f;
+                color: white;
+            }
+
+            .initial {
+                font-size: 14px;
+                color: #999;
+            }
+        }
+
+        .container-date {
+            * {
+                margin-right: 10px;
+            }
+
+            input {
+                cursor: pointer;
+            }
+
+            .close {
+                background-color: @opacity;
+                border: 0;
+                font-size: 14px;
+                color: #666;
+            }
+
+            .close:active {
+                border-top: 1px solid @opacity;
+            }
+
+            .date {
+                background-color: @opacity;
+                border: 1px solid @d8;
+                font-size: 14px;
+                color: #666;
+                padding: 3px 20px;
+            }
+
+            .selected {
+                color: red;
+            }
+
+            .date:active {
+                box-shadow: 1px 1px 1px @d8;
+            }
+
+            span {
+                font-size: 14px;
+                color: #666;
+            }
+
+            .export {
+                background-color: @opacity;
+                border: 0;
+                font-size: 14px;
+                // color: #666;`
+                color: #FFBF00;
+            }
+
+            .export:active {
+                border-top: 1px solid @opacity;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+//

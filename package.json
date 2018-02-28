@@ -1,0 +1,32 @@
+{
+  "name": "ppy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "",
+    "babel-loader": "",
+    "babel-preset-es2015": "",
+    "babel-preset-react": "",
+    "css-loader": "^0.28.3",
+    "dialog-react": "^1.0.2",
+    "pagination-react": "^1.1.5",
+    "prop-types": "^15.5.8",
+    "react": "",
+    "react-date-range": "",
+    "react-dom": "",
+    "style-loader": "^0.17.0",
+    "verification-code-react": "^1.1.1",
+    "webpack": ""
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "prop-types": "^15.5.8",
+    "react-prop-types": "^0.4.0"
+  }
+}
